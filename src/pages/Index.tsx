@@ -1,13 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/portfolio/Navigation";
+import Hero from "@/components/portfolio/Hero";
+import About from "@/components/portfolio/About";
+import Experience from "@/components/portfolio/Experience";
+import Skills from "@/components/portfolio/Skills";
+import Workshops from "@/components/portfolio/Workshops";
+import Research from "@/components/portfolio/Research";
+import Stories from "@/components/portfolio/Stories";
+import Contact from "@/components/portfolio/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="overflow-hidden">
+      <Navigation />
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+      <Workshops />
+      <Research />
+      <Stories />
+      <Contact />
+    </main>
   );
 };
 
