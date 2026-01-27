@@ -43,16 +43,20 @@ const Navigation = () => {
           >
             NMR
           </a>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`font-body text-sm font-medium transition-colors hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground/90"
-                }`}
+                className={`font-body text-sm font-semibold transition-all
+                  hover:underline underline-offset-4
+                  hover:text-burgandy-light
+                  ${
+                    isScrolled
+                      ? "text-foreground"
+                      : "text-primary-foreground/90"
+                  }`}
               >
                 {link.name}
               </a>

@@ -15,7 +15,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-primary-foreground space-y-8 animate-slide-up order-2 lg:order-1">
             <div className="space-y-4">
-              <p className="text-burgundy-light font-body text-lg tracking-widest uppercase">
+              <p className="text-white font-body text-lg tracking-widest uppercase">
                 Journalist & TV Reporter
               </p>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -67,17 +67,17 @@ const Hero = () => {
           </div>
 
           {/* Profile Image */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end animate-scale-in">
+          <div className="relative order-2 lg:order-2 flex justify-center lg:justify-end animate-scale-in">
             <div className="relative">
               {/* Decorative ring */}
               <div className="absolute -inset-4 rounded-full border-2 border-gold-light/30 animate-pulse" />
               <div className="absolute -inset-8 rounded-full border border-primary-foreground/10" />
               
-              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary-foreground/20">
+              <div className="w-88 h-88 md:w-88 md:h-88 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary-foreground/20">
                 <img
                   src={profilePhoto}
                   alt="Nigar Meherin Rini"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
