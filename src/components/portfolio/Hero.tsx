@@ -73,7 +73,7 @@ const Hero = () => {
               <div className="absolute -inset-4 rounded-full border-2 border-gold-light/30 animate-pulse" />
               <div className="absolute -inset-8 rounded-full border border-primary-foreground/10" />
               
-              <div className="w-88 h-88 md:w-88 md:h-88 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary-foreground/20">
+              <div className="w-80 h-80 md:w-88 md:h-88 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary-foreground/20">
                 <img
                   src={profilePhoto}
                   alt="Nigar Meherin Rini"
