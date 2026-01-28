@@ -48,7 +48,7 @@ const Projects = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}

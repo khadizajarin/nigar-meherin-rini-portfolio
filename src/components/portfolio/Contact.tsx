@@ -18,12 +18,12 @@ const Contact = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-7">
               <a
                 href="mailto:meherinrini137@gmail.com"
-                className="flex items-center gap-4 p-5 bg-primary-foreground/10 backdrop-blur-sm rounded-2xl hover:bg-primary-foreground/20 transition-all duration-300 group"
+                className="flex items-center gap-4 p-6 bg-primary-foreground/10 backdrop-blur-sm rounded-2xl hover:bg-primary-foreground/20 transition-all duration-300 group"
               >
                 <div className="w-14 h-14 bg-primary-foreground/20 rounded-xl flex items-center justify-center group-hover:bg-primary-foreground/30 transition-colors">
                   <Mail className="w-6 h-6" />
@@ -36,7 +36,7 @@ const Contact = () => {
 
               <a
                 href="tel:+8801786506137"
-                className="flex items-center gap-4 p-5 bg-primary-foreground/10 backdrop-blur-sm rounded-2xl hover:bg-primary-foreground/20 transition-all duration-300 group"
+                className="flex items-center gap-4 p-6 bg-primary-foreground/10 backdrop-blur-sm rounded-2xl hover:bg-primary-foreground/20 transition-all duration-300 group"
               >
                 <div className="w-14 h-14 bg-primary-foreground/20 rounded-xl flex items-center justify-center group-hover:bg-primary-foreground/30 transition-colors">
                   <Phone className="w-6 h-6" />
@@ -47,7 +47,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-5 bg-primary-foreground/10 backdrop-blur-sm rounded-2xl">
+              <div className="flex items-center gap-4 p-6 bg-primary-foreground/10 backdrop-blur-sm rounded-2xl">
                 <div className="w-14 h-14 bg-primary-foreground/20 rounded-xl flex items-center justify-center">
                   <MapPin className="w-6 h-6" />
                 </div>

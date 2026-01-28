@@ -7,7 +7,8 @@ import Workshops from "@/components/portfolio/Workshops";
 import Research from "@/components/portfolio/Research";
 import Stories from "@/components/portfolio/Stories";
 import Contact from "@/components/portfolio/Contact";
-import Projects from "../components/portfolio/Projects";
+import Projects from "@/components/portfolio/Projects";
+import PhotoGallery from "@/components/portfolio/PhotoGallery";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <Projects />
       <Research />
       <Stories />
+      {/* <PhotoGallery/> */}
       <Contact />
     </main>
   );

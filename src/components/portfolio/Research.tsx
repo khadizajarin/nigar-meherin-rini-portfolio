@@ -13,7 +13,7 @@ const Research = () => {
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-hero rounded-3xl p-8 md:p-12 text-primary-foreground shadow-portfolio-lg">
             <div className="flex items-start gap-6">
               <div className="w-16 h-16 bg-primary-foreground/20 rounded-2xl flex items-center justify-center shrink-0">
