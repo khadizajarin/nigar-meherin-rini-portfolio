@@ -24,22 +24,27 @@ const stories = [
   {
     title: "Students' Suffering at Chittagong University Bank",
     type: "Investigative",
+    link: "https://www.facebook.com/share/v/1CLcQJjWQJ/?mibextid=wwXIfr",
   },
   {
     title: "CU Students Face Transportation Woes",
     type: "News Feature",
+    link: "https://www.facebook.com/share/v/1ZakjRRcKS/?mibextid=wwXIfr",
   },
   {
     title: "Abandoned Transportation at CU: A Gift That Became Thorn",
     type: "Documentary",
+    link: "https://www.facebook.com/share/v/16m4xVRmVw/?mibextid=wwXIfr",
   },
   {
     title: "Is Regional Language a Barrier?",
     type: "Feature Story",
+    link: "https://www.facebook.com/share/v/1Fq8nxMA1Z/?mibextid=wwXIfr",
   },
   {
     title: "The Long-Awaited Convocation of CU",
     type: "Event Coverage",
+    link: "https://www.facebook.com/share/v/19khayDL61/?mibextid=wwXIfr",
   },
 ];
 
