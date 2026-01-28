@@ -1,5 +1,5 @@
 import { Mail, Phone, Linkedin, Facebook } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo-2.jpeg";
 
 const Hero = () => {
   return (
@@ -73,11 +73,11 @@ const Hero = () => {
               <div className="absolute -inset-4 rounded-full border-2 border-gold-light/30 animate-pulse" />
               <div className="absolute -inset-8 rounded-full border border-primary-foreground/10" />
               
-              <div className="w-80 h-80 md:w-88 md:h-88 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary-foreground/20">
+              <div className="w-80 h-80 md:w-88 md:h-88 lg:w-[30rem] lg:h-[30rem] rounded-full overflow-hidden shadow-glow border-4 border-primary-foreground/20">
                 <img
                   src={profilePhoto}
                   alt="Nigar Meherin Rini"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
