@@ -7,7 +7,6 @@ const experiences = [
     period: "May 2024 - December 2025",
     description: "Covering breaking news, conducting interviews, and producing compelling multimedia stories for one of Bangladesh's leading news channels.",
     icon: Tv,
-    current: true,
   },
   {
     title: "Secretary",
