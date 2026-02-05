@@ -32,6 +32,14 @@ const participatedWorkshops = [
 ];
 
 const conductedWorkshops = [
+   {
+    title: "Co-Trainer: Mobile Journalism (MoJo) Workshops",
+    organization:
+      "Supervised by Rajib Nandy, Associate Professor, Communication and Journalism, CU",
+    description:
+      "Co-facilitated hands-on training on mobile journalism tools and storytelling; supported curriculum design, training delivery, participant mentoring, and practical sessions on mobile-based reporting, video production, and digital storytelling.",
+    date: "2023–2025",
+  },
   {
     title: "Mobile Journalism Workshop",
     organization: "Future Media Institute of Kolkata",
@@ -128,7 +136,7 @@ const Workshops = () => {
             </div>
 
             <div className="space-y-4">
-              {conductedWorkshops.map((workshop, index) => (
+             {conductedWorkshops.map((workshop, index) => (
                 <div
                   key={index}
                   className="bg-card rounded-xl p-5 shadow-portfolio-sm hover:shadow-portfolio-md transition-all duration-300 border-l-4 border-transparent hover:border-secondary"
@@ -138,10 +146,18 @@ const Workshops = () => {
                       <h4 className="font-body font-semibold text-foreground mb-1">
                         {workshop.title}
                       </h4>
+
+                      {workshop.description && (
+                        <p className="text-sm text-muted-foreground mb-1">
+                          {workshop.description}
+                        </p>
+                      )}
+
                       {workshop.organization && (
                         <p className="text-sm text-primary">{workshop.organization}</p>
                       )}
                     </div>
+
                     <span className="text-xs text-muted-foreground whitespace-nowrap bg-muted px-2 py-1 rounded">
                       {workshop.date}
                     </span>
