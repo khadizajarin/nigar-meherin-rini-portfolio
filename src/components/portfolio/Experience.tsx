@@ -4,7 +4,7 @@ const experiences = [
   {
     title: "Reporter",
     company: "Somoy Television",
-    period: "May 2024 - Present",
+    period: "May 2024 - December 2025",
     description: "Covering breaking news, conducting interviews, and producing compelling multimedia stories for one of Bangladesh's leading news channels.",
     icon: Tv,
     current: true,

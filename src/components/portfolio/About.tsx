@@ -5,7 +5,8 @@ const education = [
     degree: "Master of Social Science",
     field: "Communication and Journalism",
     institution: "University of Chittagong",
-    period: "February 2025 – Ongoing",
+    period: "February 2025 – January 2025",
+    grade: "Result Unpublished"
   },
   {
     degree: "Bachelor of Social Science",
