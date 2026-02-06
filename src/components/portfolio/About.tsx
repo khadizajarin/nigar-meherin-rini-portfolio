@@ -1,35 +1,11 @@
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
-const education = [
-  {
-    degree: "Master of Social Science",
-    field: "Communication and Journalism",
-    institution: "University of Chittagong",
-    period: "February 2025 – January 2025",
-    grade: "Result Unpublished"
-  },
-  {
-    degree: "Bachelor of Social Science",
-    field: "Communication and Journalism",
-    institution: "University of Chittagong",
-    period: "2023",
-    grade: "CGPA 3.44/4.00",
-  },
-  {
-    degree: "HSC",
-    institution: "Khagrachari Govt. College",
-    period: "2019",
-    grade: "GPA 4.75/5.00",
-  },
-  {
-    degree: "SSC",
-    institution: "Khagrachari Govt. High School",
-    period: "2017",
-    grade: "GPA 4.91/5.00",
-  },
-];
+import { useEducation } from "@/hooks/useEducation";
+
 
 const About = () => {
+  const { education, loading } = useEducation();
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -96,14 +72,13 @@ const About = () => {
             </div>
 
             <div className="space-y-4">
-              {education.map((edu, index) => (
+              {education.map((edu) => (
                 <div
-                  key={index}
+                  key={edu.id}
                   className="relative pl-8 pb-8 last:pb-0 border-l-2 border-muted hover:border-primary transition-colors group"
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-muted group-hover:bg-primary transition-colors" />
-                  
+
                   <div className="bg-card rounded-xl p-6 shadow-portfolio-sm hover:shadow-portfolio-md transition-all duration-300">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <h4 className="font-display text-lg font-semibold text-foreground">
@@ -113,16 +88,24 @@ const About = () => {
                         {edu.period}
                       </span>
                     </div>
+
                     {edu.field && (
-                      <p className="text-primary font-medium mb-1">{edu.field}</p>
+                      <p className="text-primary font-medium mb-1">
+                        {edu.field}
+                      </p>
                     )}
+
                     <p className="text-muted-foreground">{edu.institution}</p>
+
                     {edu.grade && (
-                      <p className="text-sm text-muted-foreground mt-2 font-medium">{edu.grade}</p>
+                      <p className="text-sm text-muted-foreground mt-2 font-medium">
+                        {edu.grade}
+                      </p>
                     )}
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
         </div>
