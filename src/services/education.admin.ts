@@ -5,6 +5,8 @@ import {
   updateDoc,
   orderBy,
   query,
+  addDoc,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
@@ -36,4 +38,19 @@ export async function updateEducation(
 ) {
   const ref = doc(db, "education", id);
   await updateDoc(ref, data);
+}
+
+export async function addEducation() {
+  await addDoc(colRef, {
+    degree: "New Degree",
+    institution: "",
+    period: "",
+    grade: "",
+    order: 99,
+  });
+}
+
+export async function deleteEducation(id: string) {
+  const ref = doc(db, "education", id);
+  await deleteDoc(ref);
 }

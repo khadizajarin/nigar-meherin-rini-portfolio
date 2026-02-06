@@ -5,6 +5,7 @@ import { auth } from "@/lib/firebase";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import EducationEditor from "./EducationEditor";
+import ExperienceEditor from "./ExperienceEditor";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -38,8 +39,8 @@ const Dashboard = () => {
       </div>
 
       <div className="p-8 space-y-10">
-      <h1 className="text-2xl font-bold">Admin Dashboard</h1>
       <EducationEditor />
+      <ExperienceEditor/>
     </div>
     </div>
   );
