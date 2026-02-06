@@ -23,17 +23,17 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am a dedicated journalist currently working as a Reporter at Somoy Television, 
-              one of Bangladesh's leading news channels. With a strong academic background in 
-              Communication and Journalism from the University of Chittagong, I bring both 
-              theoretical knowledge and practical skills to every story I cover.
+              I am a media professional with three years of hands-on experience in storytelling across multiple platforms. My work is focused on crafting meaningful narratives that reflect social realities, cultural diversity, and human experiences, emphasizing authenticity and ethical representation.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My work spans multimedia reporting, anchoring, script writing, and content creation. 
-              I'm passionate about uncovering stories that matter and presenting them in compelling 
-              ways that resonate with audiences.
+              Over the years, I have actively contributed to story development, documentary coverage, and both visual and written storytelling. I have also participated in and conducted media workshops, which have strengthened my skills in narrative techniques, documentary production, and audience engagement.
             </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              I am particularly passionate about documentary storytelling, where research, empathy, and creativity converge to give voice to underrepresented stories. Through my work, I strive to create content that informs, inspires, and leaves a lasting social impact.
+            </p>
+
 
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex items-center gap-2 text-muted-foreground">

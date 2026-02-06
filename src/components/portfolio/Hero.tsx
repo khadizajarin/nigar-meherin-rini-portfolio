@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="text-primary-foreground space-y-8 animate-slide-up order-2 lg:order-1">
             <div className="space-y-4">
               <p className="text-white font-body text-lg tracking-widest uppercase">
-                Journalist & TV Reporter
+                Journalist
               </p>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Nigar Meherin
