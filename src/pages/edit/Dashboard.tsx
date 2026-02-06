@@ -1,51 +1,81 @@
-import ProtectedRoute from "@/components/ProtectedRoute";
+"use client";
 
+import { useState } from "react";
+import ProtectedRoute from "@/components/ProtectedRoute";
 import { signOut } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+
 import EducationEditor from "./EducationEditor";
 import ExperienceEditor from "./ExperienceEditor";
 
+type Tab = "education" | "experience";
+
 const Dashboard = () => {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState<Tab>("education");
 
   const handleLogout = async () => {
     try {
       await signOut(auth);
-
       toast.success("Logged out successfully");
-
-      navigate("/edit");
+      navigate("/");
     } catch (error) {
       console.error("Logout failed", error);
     }
   };
 
   return (
-    <div className="min-h-screen bg-background p-8">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-display font-bold">
-          Edit Dashboard
-        </h1>
-
+    <div className="min-h-screen flex bg-background">
+      {/* Sidebar */}
+      <aside className="w-64 bg-card p-6 border-r border-muted/20 flex flex-col">
+        {/* Logout on top */}
         <button
           onClick={handleLogout}
-          className="px-4 py-2 rounded-lg bg-destructive text-destructive-foreground hover:opacity-90 transition"
+          className="mb-6 px-4 py-2 rounded-lg bg-destructive text-destructive-foreground hover:opacity-90 transition"
         >
           Logout
         </button>
-      </div>
 
-      <div className="p-8 space-y-10">
-      <EducationEditor />
-      <ExperienceEditor/>
-    </div>
+        <h1 className="text-2xl font-display font-bold mb-8">Dashboard</h1>
+
+        {/* Navigation Tabs */}
+        <nav className="flex flex-col gap-3">
+          <button
+            onClick={() => setActiveTab("education")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "education"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            Education
+          </button>
+
+          <button
+            onClick={() => setActiveTab("experience")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "experience"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            Experiences
+          </button>
+
+          {/* Add more tabs here if needed */}
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 p-8 overflow-auto">
+        {activeTab === "education" && <EducationEditor />}
+        {activeTab === "experience" && <ExperienceEditor />}
+      </main>
     </div>
   );
 };
-
 
 export default () => (
   <ProtectedRoute>
