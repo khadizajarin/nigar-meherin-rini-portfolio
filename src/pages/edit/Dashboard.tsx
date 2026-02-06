@@ -4,6 +4,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import EducationEditor from "./EducationEditor";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -36,9 +37,10 @@ const Dashboard = () => {
         </button>
       </div>
 
-      <p className="text-muted-foreground">
-        Edit everything here
-      </p>
+      <div className="p-8 space-y-10">
+      <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+      <EducationEditor />
+    </div>
     </div>
   );
 };
