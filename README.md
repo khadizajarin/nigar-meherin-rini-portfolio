@@ -1,49 +1,4 @@
-# Nigar Meherin Rini – Personal Portfolio
 
-A full-stack **personal portfolio website** built for Nigar Meherin Rini, enabling dynamic management of her personal and academic information.  
-
-This project was initially scaffolded using **Lovable**, followed by **UI modifications** and integration with **Firebase Auth & Firestore** for real-time dynamic content.
-
----
-
-## 🚀 Live Demo
-[https://nigar-meherin-rini.vercel.app/](https://nigar-meherin-rini.vercel.app/)
-
-## 💻 GitHub Repository
-[https://github.com/khadizajarin/nigar-meherin-rini-portfolio](https://github.com/khadizajarin/nigar-meherin-rini-portfolio)
-
----
-
-## 🧩 Features
-
-- Fully **responsive design** with smooth animations and transitions
-- **Admin login system** for secure access
-- **Dynamic CRUD operations**: Add, update, delete data for:
-  - Workshops
-  - Research experiences
-  - Teaching roles
-  - Academic projects
-  - Special stories
-- Ordered display for experiences and projects
-- Interactive UI elements using **Radix UI**
-- Toast notifications using **Sonner**
-
----
-
-## 🛠 Tech Stack
-
-- **Frontend:** React + TypeScript
-- **Styling:** Tailwind CSS
-- **UI Components:** Radix UI (dialogs, toast, accordion, etc.)
-- **Backend / Database:** Firebase (Auth & Firestore)
-- **State Management:** React Query
-- **Development Tooling:** Vite
-- **Icons:** Lucide React
-- **Scaffolding:** Lovable
-
----
-
-## 📂 Project Structure
 
 # Nigar Meherin Rini – Personal Portfolio
 
