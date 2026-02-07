@@ -11,8 +11,9 @@ import EducationEditor from "./EducationEditor";
 import ExperienceEditor from "./ExperienceEditor";
 import WorkshopEditor from "./WorkshopEditor";
 import ProjectsEditor from "./ProjectsEditor";
+import ResearchEditor from "./ResearchEditor";
 
-type Tab = "education" | "experience" | "workshops" | "projects";
+type Tab = "education" | "experience" | "workshops" | "projects" | "research";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -88,6 +89,17 @@ const Dashboard = () => {
             Projects
           </button>
 
+          <button
+            onClick={() => setActiveTab("research")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "research"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            Research
+          </button>
+
           {/* Add more tabs here if needed */}
         </nav>
       </aside>
@@ -98,6 +110,7 @@ const Dashboard = () => {
         {activeTab === "experience" && <ExperienceEditor />}
         {activeTab === "workshops" && <WorkshopEditor />}
         {activeTab === "projects" && <ProjectsEditor />}
+        {activeTab === "research" && <ResearchEditor/>}
       </main>
     </div>
   );
