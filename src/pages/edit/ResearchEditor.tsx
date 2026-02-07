@@ -103,7 +103,7 @@ const ResearchItem = ({ item }: any) => {
         />
       </div>
 
-      <input
+      <textarea
         className="input"
         value={form.title}
         onChange={(e) => setForm({ ...form, title: e.target.value })}

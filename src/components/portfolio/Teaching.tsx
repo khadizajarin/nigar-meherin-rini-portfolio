@@ -1,6 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { GraduationCap } from "lucide-react";
+import { useEffect, useState } from "react";
+import { getTeaching } from "@/services/teaching.firestore";
 
 const Teaching = () => {
+  const [data, setData] = useState<any[]>([]);
+
+  useEffect(() => {
+    getTeaching().then(setData);
+  }, []);
+
+  if (!data.length) return null;
+
+  const item = data[0];
+
   return (
     <section id="teaching" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -22,29 +35,19 @@ const Teaching = () => {
 
               <div className="space-y-4">
                 <div>
-                  <span className="text-gold-light font-body text-sm tracking-widest uppercase">
-                    Teaching Assistant • 2024
+                  <span className="text-gold-light text-sm uppercase">
+                    {item.role} • {item.period}
                   </span>
-                  <h3 className="font-display text-2xl md:text-3xl font-bold mt-2">
-                    CAJ 408: Multimedia Production (Fourth Year Course)
+                  <h3 className="text-2xl md:text-3xl font-bold mt-2">
+                    {item.title}
                   </h3>
-                  <p className="text-primary-foreground/80 mt-2">
-                    Supervised by <strong>Rajib Nandy</strong>, Associate Professor, 
-                    Department of Communication and Journalism, University of Chittagong
-                  </p>
+                  <p className="mt-2">{item.supervisor}</p>
                 </div>
 
-                <ul className="list-disc list-inside space-y-2 text-primary-foreground/85">
-                  <li>
-                    Assisted in undergraduate teaching activities, including class facilitation
-                    and tutorial support
-                  </li>
-                  <li>
-                    Supported course coordination, student mentoring, and academic assessment processes
-                  </li>
-                  <li>
-                    Reviewed student assignments and provided structured, constructive academic feedback
-                  </li>
+                <ul className="list-disc list-inside space-y-2">
+                  {item.points?.map((p: string, i: number) => (
+                    <li key={i}>{p}</li>
+                  ))}
                 </ul>
               </div>
             </div>
