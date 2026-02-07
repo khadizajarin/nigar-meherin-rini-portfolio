@@ -1,73 +1,167 @@
-# Welcome to your Lovable project
+# Nigar Meherin Rini – Personal Portfolio
 
-## Project info
+A full-stack **personal portfolio website** built for Nigar Meherin Rini, enabling dynamic management of her personal and academic information.  
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project was initially scaffolded using **Lovable**, followed by **UI modifications** and integration with **Firebase Auth & Firestore** for real-time dynamic content.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Live Demo
+[https://nigar-meherin-rini.vercel.app/](https://nigar-meherin-rini.vercel.app/)
 
-**Use Lovable**
+## 💻 GitHub Repository
+[https://github.com/khadizajarin/nigar-meherin-rini-portfolio](https://github.com/khadizajarin/nigar-meherin-rini-portfolio)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧩 Features
 
-**Use your preferred IDE**
+- Fully **responsive design** with smooth animations and transitions
+- **Admin login system** for secure access
+- **Dynamic CRUD operations**: Add, update, delete data for:
+  - Workshops
+  - Research experiences
+  - Teaching roles
+  - Academic projects
+  - Special stories
+- Ordered display for experiences and projects
+- Interactive UI elements using **Radix UI**
+- Toast notifications using **Sonner**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠 Tech Stack
 
-Follow these steps:
+- **Frontend:** React + TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI (dialogs, toast, accordion, etc.)
+- **Backend / Database:** Firebase (Auth & Firestore)
+- **State Management:** React Query
+- **Development Tooling:** Vite
+- **Icons:** Lucide React
+- **Scaffolding:** Lovable
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📂 Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Nigar Meherin Rini – Personal Portfolio
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+A full-stack **personal portfolio website** built for Nigar Meherin Rini, enabling dynamic management of her personal and academic information.  
+
+This project was initially scaffolded using **Lovable**, followed by **UI modifications** and integration with **Firebase Auth & Firestore** for real-time dynamic content.
+
+---
+
+## 🚀 Live Demo
+[https://nigar-meherin-rini.vercel.app/](https://nigar-meherin-rini.vercel.app/)
+
+## 💻 GitHub Repository
+[https://github.com/khadizajarin/nigar-meherin-rini-portfolio](https://github.com/khadizajarin/nigar-meherin-rini-portfolio)
+
+---
+
+## 🧩 Features
+
+- Fully **responsive design** with smooth animations and transitions
+- **Admin login system** for secure access
+- **Dynamic CRUD operations**: Add, update, delete data for:
+  - Workshops
+  - Research experiences
+  - Teaching roles
+  - Academic projects
+  - Special stories
+- Ordered display for experiences and projects
+- Interactive UI elements using **Radix UI**
+- Toast notifications using **Sonner**
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React + TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** Radix UI (dialogs, toast, accordion, etc.)
+- **Backend / Database:** Firebase (Auth & Firestore)
+- **State Management:** React Query
+- **Development Tooling:** Vite
+- **Icons:** Lucide React
+- **Scaffolding:** Lovable
+
+---
+
+## 📂 Project Structure
+
+src/
+├─ components/ # Reusable UI components (Cards, Forms, Layouts)
+├─ hooks/ # Custom hooks for admin CRUD and data fetching
+├─ services/ # Firebase service functions (CRUD operations)
+├─ pages/ # React pages / routes
+├─ lib/ # Firebase & other library configurations
+├─ styles/ # Tailwind customizations and global styles
+├─ assets/ # Images, icons, and other static assets
+└─ types/ # TypeScript type definitions
+
+
+---
+
+## ⚡ Admin Features
+
+- **Add** new workshops, research experiences, projects, or stories
+- **Update** existing entries in real-time
+- **Delete** outdated or unnecessary items
+- Changes are automatically synced with **Firebase Firestore**
+- Secure access via **Firebase Auth login**
+
+---
+
+## 📥 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- Firebase project with **Auth** and **Firestore** enabled
+
+### Installation
+
+```bash
+git clone https://github.com/khadizajarin/nigar-meherin-rini-portfolio.git
+cd nigar-meherin-rini-portfolio
+npm install
+```
+
+## Running Locally
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Open http://localhost:5173
+ in your browser.
 
-**Use GitHub Codespaces**
+## Building for Production
+```bash
+npm run build
+npm run preview
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🔒 Admin Login
 
-## What technologies are used for this project?
+- Login with credentials registered in Firebase Auth
 
-This project is built with:
+- Access the admin panel to manage portfolio content dynamically
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📌 Notes
 
-## How can I deploy this project?
+- All dynamic data is stored in Firebase Firestore
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- UI uses Radix UI components and Tailwind CSS
 
-## Can I connect a custom domain to my Lovable project?
+- Toast notifications powered by Sonner
 
-Yes, you can!
+- Fully responsive and optimized for desktop and mobile
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## ✨ Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project was built as a personal portfolio, but contributions to improve UI, performance, or functionality are welcome.
+
