@@ -10,8 +10,9 @@ import { toast } from "sonner";
 import EducationEditor from "./EducationEditor";
 import ExperienceEditor from "./ExperienceEditor";
 import WorkshopEditor from "./WorkshopEditor";
+import ProjectsEditor from "./ProjectsEditor";
 
-type Tab = "education" | "experience" | "workshops";
+type Tab = "education" | "experience" | "workshops" | "projects";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -76,6 +77,17 @@ const Dashboard = () => {
             Workshops
           </button>
 
+          <button
+            onClick={() => setActiveTab("projects")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "projects"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            Projects
+          </button>
+
           {/* Add more tabs here if needed */}
         </nav>
       </aside>
@@ -85,6 +97,7 @@ const Dashboard = () => {
         {activeTab === "education" && <EducationEditor />}
         {activeTab === "experience" && <ExperienceEditor />}
         {activeTab === "workshops" && <WorkshopEditor />}
+        {activeTab === "projects" && <ProjectsEditor />}
       </main>
     </div>
   );
