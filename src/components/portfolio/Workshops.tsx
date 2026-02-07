@@ -1,5 +1,6 @@
 import { Award, BookOpen } from "lucide-react";
 import { getWorkshops } from "../../services/workshops.firestore";
+import { useEffect, useState } from "react";
 
 // const participatedWorkshops = [
 //   {
@@ -70,10 +71,24 @@ import { getWorkshops } from "../../services/workshops.firestore";
 //     date: "April 2024",
 //   },
 // ];
-const attended = await getWorkshops("attended");
-const conducted = await getWorkshops("conducted");
+
+
 
 const Workshops = () => {
+  const [attended, setAttended] = useState([]);
+  const [conducted, setConducted] = useState([]);
+
+  useEffect(() => {
+    const load = async () => {
+      const attendedData = await getWorkshops("attended");
+      const conductedData = await getWorkshops("conducted");
+
+      setAttended(attendedData);
+      setConducted(conductedData);
+    };
+
+    load();
+  }, []);
   return (
     <section id="workshops" className="py-24 bg-muted/50">
       <div className="container mx-auto px-6">
