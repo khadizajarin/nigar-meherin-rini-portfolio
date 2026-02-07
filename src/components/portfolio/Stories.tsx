@@ -1,54 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect, useState } from "react";
 import { Play, ExternalLink } from "lucide-react";
-
-const stories = [
-  {
-    title: "Students Becoming Entrepreneurs by Quitting Tuition on CU Campus",
-    type: "Feature Story",
-    link: "https://www.facebook.com/share/v/1Fowr2tDFR/",
-  },
-  {
-    title: "A Spine-Chilling Mysterious Cave",
-    type: "Documentary",
-    link: "https://www.facebook.com/share/v/1AxcRKYNxY/",
-  },
-  {
-    title: "Khagrachari: A Mystical Union of Sky and Hills",
-    type: "Travel Feature",
-    link: "https://www.facebook.com/share/v/17MRTxj8nN/",
-  },
-  {
-    title: "Small Huts of CU are Healing Students' Minds",
-    type: "Lifestyle",
-    link: "https://www.facebook.com/share/v/1Fgm3jDRgh/",
-  },
-  {
-    title: "Students' Suffering at Chittagong University Bank",
-    type: "Investigative",
-    link: "https://www.facebook.com/share/v/1CLcQJjWQJ/?mibextid=wwXIfr",
-  },
-  {
-    title: "CU Students Face Transportation Woes",
-    type: "News Feature",
-    link: "https://www.facebook.com/share/v/1ZakjRRcKS/?mibextid=wwXIfr",
-  },
-  {
-    title: "Abandoned Transportation at CU: A Gift That Became Thorn",
-    type: "Documentary",
-    link: "https://www.facebook.com/share/v/16m4xVRmVw/?mibextid=wwXIfr",
-  },
-  {
-    title: "Is Regional Language a Barrier?",
-    type: "Feature Story",
-    link: "https://www.facebook.com/share/v/1Fq8nxMA1Z/?mibextid=wwXIfr",
-  },
-  {
-    title: "The Long-Awaited Convocation of CU",
-    type: "Event Coverage",
-    link: "https://www.facebook.com/share/v/19khayDL61/?mibextid=wwXIfr",
-  },
-];
+import { getStories } from "@/services/stories.firestore";
 
 const Stories = () => {
+  const [stories, setStories] = useState<any[]>([]);
+
+  useEffect(() => {
+    loadStories();
+  }, []);
+
+  const loadStories = async () => {
+    const data = await getStories();
+    setStories(data);
+  };
+
   return (
     <section id="stories" className="py-24 bg-muted/50">
       <div className="container mx-auto px-6">
@@ -60,15 +26,14 @@ const Stories = () => {
             Special <span className="text-primary">Stories</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            A collection of impactful multimedia stories covering diverse topics 
-            from campus life to environmental features
+            A collection of impactful multimedia stories
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {stories.map((story, index) => (
+          {stories.map((story) => (
             <div
-              key={index}
+              key={story.id}
               className="group bg-card rounded-2xl overflow-hidden shadow-portfolio-sm hover:shadow-portfolio-lg transition-all duration-300 hover:-translate-y-2"
             >
               <div className="h-2 bg-gradient-hero" />
@@ -76,10 +41,11 @@ const Stories = () => {
                 <span className="inline-block px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full mb-4">
                   {story.type}
                 </span>
+
                 <h3 className="font-display text-lg font-bold text-foreground mb-4 line-clamp-2 group-hover:text-primary transition-colors">
                   {story.title}
                 </h3>
-                
+
                 {story.link ? (
                   <a
                     href={story.link}
