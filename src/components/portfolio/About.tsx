@@ -23,15 +23,25 @@ const About = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am a media professional with three years of hands-on experience in storytelling across multiple platforms. My work is focused on crafting meaningful narratives that reflect social realities, cultural diversity, and human experiences, emphasizing authenticity and ethical representation.
+             I am Nigar Meherin Rini, born and raised in Khagrachari, a hill district of Bangladesh where access to quality education and opportunities can be limited. Growing up in this environment shaped my resilience and motivated me to pursue higher education beyond my hometown.
+
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Over the years, I have actively contributed to story development, documentary coverage, and both visual and written storytelling. I have also participated in and conducted media workshops, which have strengthened my skills in narrative techniques, documentary production, and audience engagement.
+            I studied Communication and Journalism at the University of Chittagong, where I developed a strong interest in storytelling, media practice, and research. My academic journey helped me build a foundation in communication theory, media production, and analytical thinking.
+
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am particularly passionate about documentary storytelling, where research, empathy, and creativity converge to give voice to underrepresented stories. Through my work, I strive to create content that informs, inspires, and leaves a lasting social impact.
+              Professionally, I worked as a Mojo Stringer at The Business Standard, where I gained hands-on experience in mobile journalism and digital reporting. Later, I worked for nearly two years as a Campus Correspondent at Somoy Television, covering campus and social issues, producing reports, and strengthening my field journalism and storytelling skills.
+            </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Alongside my professional work, I served as a Teaching Assistant, which enhanced my academic engagement and mentoring abilities. I was also the Secretary of the Chittagong University Content Creators’ Club, where I trained more than 30 members in content creation, script writing, and storytelling. In addition, I have conducted several workshops on script writing and story development, reflecting my commitment to knowledge sharing and collaborative learning.
+            </p>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              I aspire to contribute to ethical storytelling, research-driven communication, and meaningful media practices that promote informed dialogue and social awareness.
             </p>
 
 

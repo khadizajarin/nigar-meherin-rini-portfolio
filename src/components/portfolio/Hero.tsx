@@ -25,8 +25,7 @@ const Hero = () => {
             </div>
 
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg font-body leading-relaxed">
-              Motivated and detail-oriented journalist with a passion for storytelling, 
-              multimedia reporting, and uncovering impactful narratives that matter.
+              A communication practitioner with a foundation in journalism, dedicated to ethical storytelling and socially responsible communication. My work focuses on highlighting diverse perspectives, fostering informed dialogue, and using media as a tool for accountability and positive social impact.
             </p>
 
             {/* Contact Info */}
