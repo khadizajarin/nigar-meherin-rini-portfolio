@@ -14,8 +14,9 @@ import ProjectsEditor from "./ProjectsEditor";
 import ResearchEditor from "./ResearchEditor";
 import TeachingEditor from "./TeachingEditor";
 import StoriesEditor from "./StoriesEditor";
+import PhotoGalleryEditor from "./PhotoGalleryEditor";
 
-type Tab = "education" | "experience" | "workshops" | "projects" | "research" | "teaching" | "stories";
+type Tab = "education" | "experience" | "workshops" | "projects" | "research" | "teaching" | "stories" | "photo-gallery";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -124,7 +125,18 @@ const Dashboard = () => {
             Stories
           </button>
 
-          {/* Add more tabs here if needed */}
+          <button
+            onClick={() => setActiveTab("photo-gallery")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "photo-gallery"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            Photo Gallery
+          </button>
+
+          
         </nav>
       </aside>
 
@@ -137,6 +149,7 @@ const Dashboard = () => {
         {activeTab === "research" && <ResearchEditor/>}
         {activeTab === "teaching" && <TeachingEditor/>}
         {activeTab === "stories" && <StoriesEditor/>}
+        {activeTab === "photo-gallery" && <PhotoGalleryEditor/>}
       </main>
     </div>
   );

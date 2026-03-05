@@ -24,7 +24,7 @@ const Index = () => {
       <Research />
       <Teaching/>
       <Stories />
-      {/* <PhotoGallery/> */}
+      <PhotoGallery/>
       <Contact />
     </main>
   );
