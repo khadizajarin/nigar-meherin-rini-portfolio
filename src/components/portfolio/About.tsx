@@ -1,10 +1,12 @@
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 import { useEducation } from "@/hooks/useEducation";
-
+import { useAbout } from "@/hooks/useAbout";
 
 const About = () => {
-  const { education, loading } = useEducation();
+  const { education, loading: educationLoading } = useEducation();
+  const { data: about, isLoading } = useAbout();
+  console.log(about);
 
   return (
     <section id="about" className="py-24 bg-background">
@@ -22,37 +24,22 @@ const About = () => {
               </h2>
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-             I am Nigar Meherin Rini, born and raised in Khagrachari, a hill district of Bangladesh where access to quality education and opportunities can be limited. Growing up in this environment shaped my resilience and motivated me to pursue higher education beyond my hometown.
-
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-            I studied Communication and Journalism at the University of Chittagong, where I developed a strong interest in storytelling, media practice, and research. My academic journey helped me build a foundation in communication theory, media production, and analytical thinking.
-
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Professionally, I worked as a Mojo Stringer at The Business Standard, where I gained hands-on experience in mobile journalism and digital reporting. Later, I worked for nearly two years as a Campus Correspondent at Somoy Television, covering campus and social issues, producing reports, and strengthening my field journalism and storytelling skills.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Alongside my professional work, I served as a Teaching Assistant, which enhanced my academic engagement and mentoring abilities. I was also the Secretary of the Chittagong University Content Creators’ Club, where I trained more than 30 members in content creation, script writing, and storytelling. In addition, I have conducted several workshops on script writing and story development, reflecting my commitment to knowledge sharing and collaborative learning.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I aspire to contribute to ethical storytelling, research-driven communication, and meaningful media practices that promote informed dialogue and social awareness.
-            </p>
+        
+            {about?.paragraphs?.map((p : string, i :number) => (
+              <p key={i} className="text-lg text-muted-foreground leading-relaxed">
+                {p}
+              </p>
+            ))}
 
 
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Chittagong, Bangladesh</span>
+                <span>{about?.location}</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Calendar className="w-5 h-5 text-primary" />
-                <span>Born June 22, 2001</span>
+                <span>{about?.birthDate}</span>
               </div>
             </div>
 
@@ -60,10 +47,10 @@ const About = () => {
             <div className="pt-6">
               <h3 className="font-display text-xl font-semibold text-foreground mb-4">Languages</h3>
               <div className="flex flex-wrap gap-3">
-                {["Bengali (Native)", "English (Fluent)", "Hindi (Fluent)", "Urdu (Fluent)"].map((lang) => (
+                {about?.languages.map((lang) => (
                   <span
                     key={lang}
-                    className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm font-body"
+                    className="px-4 py-2 bg-accent text-accent-foreground rounded-full text-sm"
                   >
                     {lang}
                   </span>

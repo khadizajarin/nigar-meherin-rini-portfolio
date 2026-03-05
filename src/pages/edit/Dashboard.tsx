@@ -15,8 +15,9 @@ import ResearchEditor from "./ResearchEditor";
 import TeachingEditor from "./TeachingEditor";
 import StoriesEditor from "./StoriesEditor";
 import PhotoGalleryEditor from "./PhotoGalleryEditor";
+import AboutEditor from "./AboutEditor";
 
-type Tab = "education" | "experience" | "workshops" | "projects" | "research" | "teaching" | "stories" | "photo-gallery";
+type Tab = "about" | "education" | "experience" | "workshops" | "projects" | "research" | "teaching" | "stories" | "photo-gallery";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -48,6 +49,18 @@ const Dashboard = () => {
 
         {/* Navigation Tabs */}
         <nav className="flex flex-col gap-3">
+
+          <button
+            onClick={() => setActiveTab("about")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "about"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            About
+          </button>
+
           <button
             onClick={() => setActiveTab("education")}
             className={`text-left px-4 py-2 rounded-lg transition ${
@@ -142,6 +155,7 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <main className="flex-1 p-8 overflow-auto">
+        {activeTab === "about" && <AboutEditor />}
         {activeTab === "education" && <EducationEditor />}
         {activeTab === "experience" && <ExperienceEditor />}
         {activeTab === "workshops" && <WorkshopEditor />}

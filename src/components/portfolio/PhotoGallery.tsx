@@ -15,7 +15,7 @@ const PhotoGallery = () => {
     const load = async () => {
       const data = await getGallery();
       setItems(data);
-      console.log("Gallery items loaded:", data);
+      // console.log("Gallery items loaded:", data);
     };
     load();
   }, []);
