@@ -59,11 +59,11 @@ const AboutEditor = () => {
         }
         placeholder="Birth Date"
       />
-      
+
 
       <p>Languages (one per line)</p>
       <textarea
-        className="input"
+        className="input h-44"
         value={form.languages.join("\n")}
         onChange={(e) =>
           setForm({
