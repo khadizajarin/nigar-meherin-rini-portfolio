@@ -12,7 +12,8 @@ const Contact = () => {
             Let's Work <span className="text-gold-light">Together</span>
           </h2>
           <p className="text-primary-foreground/80 mt-4 max-w-2xl mx-auto">
-            I'm always open to new opportunities, collaborations, and interesting projects. 
+            I'm always open to new opportunities, collaborations,
+             and interesting projects. 
             Feel free to reach out!
           </p>
         </div>
@@ -113,3 +114,101 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+// import { Mail, Phone, MapPin, Linkedin, Facebook, Send } from "lucide-react";
+// import { useContact } from "@/hooks/useContact";
+
+// const Contact = () => {
+//   const { data: contact } = useContact();
+//   console.log("Contact Data:", contact); // Debugging log 
+
+//   if (!contact) return null;
+
+//   return (
+//     <section id="contact" className="py-24 bg-gradient-hero text-primary-foreground">
+//       <div className="container mx-auto px-6">
+
+//         <div className="text-center mb-16">
+//           <p className="text-gold-light text-sm tracking-widest uppercase mb-4">
+//             Get In Touch
+//           </p>
+
+//           <h2 className="text-4xl md:text-5xl font-bold">
+//             Let's Work <span className="text-gold-light">Together</span>
+//           </h2>
+//         </div>
+
+//         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+
+//           {/* Email */}
+//           <a
+//             href={`mailto:${contact.email}`}
+//             className="flex items-center gap-4 p-6 bg-primary-foreground/10 rounded-2xl"
+//           >
+//             <Mail />
+//             <div>
+//               <p>Email</p>
+//               <p>{contact.email}</p>
+//             </div>
+//           </a>
+
+//           {/* Phone */}
+//           <a
+//             href={`tel:${contact.phone}`}
+//             className="flex items-center gap-4 p-6 bg-primary-foreground/10 rounded-2xl"
+//           >
+//             <Phone />
+//             <div>
+//               <p>Phone</p>
+//               <p>{contact.phone}</p>
+//             </div>
+//           </a>
+
+//           {/* Location */}
+//           <div className="flex items-center gap-4 p-6 bg-primary-foreground/10 rounded-2xl">
+//             <MapPin />
+//             <div>
+//               <p>Location</p>
+//               <p>{contact.location}</p>
+//             </div>
+//           </div>
+
+//           {/* Socials */}
+//           <div className="flex gap-4 p-6 bg-primary-foreground/10 rounded-2xl">
+
+//             <a href={contact.linkedin} target="_blank">
+//               <Linkedin />
+//             </a>
+
+//             <a href={contact.facebook} target="_blank">
+//               <Facebook />
+//             </a>
+
+//             <a href={`mailto:${contact.email}`}>
+//               <Send />
+//             </a>
+
+//           </div>
+//         </div>
+
+//         {/* Quote */}
+//         <div className="mt-12 text-center">
+//           <p className="text-gold-light text-lg">
+//             "{contact.quote}"
+//           </p>
+//         </div>
+
+//         {/* Footer */}
+//          <div className="mt-20 pt-8 border-t border-primary-foreground/20 text-center">
+//            <p className="text-primary-foreground/60 font-body">
+//              © 2025 Nigar Meherin Rini. All rights reserved.
+//            </p>
+//          </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Contact;

@@ -15,3 +15,4 @@ export async function getContact(): Promise<ContactData> {
     ...(doc.data() as Omit<ContactData, "id">),
   };
 }
+
