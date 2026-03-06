@@ -175,6 +175,7 @@ const Dashboard = () => {
         {activeTab === "research" && <ResearchEditor/>}
         {activeTab === "teaching" && <TeachingEditor/>}
         {activeTab === "stories" && <StoriesEditor/>}
+        {activeTab === "photo-gallery" && <PhotoGalleryEditor/>}
         {activeTab === "contact" && <ContactEditor/>}
       </main>
     </div>
