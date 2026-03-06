@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { useAboutAdmin } from "@/hooks/useAboutAdmin";
@@ -10,7 +10,14 @@ const AboutEditor = () => {
   const { data, isLoading } = useAboutAdmin();
   const queryClient = useQueryClient();
 
-  const [form, setForm] = useState<any>(data);
+  const [form, setForm] = useState<any>(null);
+
+  // 🔑 Sync state when data arrives
+  useEffect(() => {
+    if (data) {
+      setForm(data);
+    }
+  }, [data]);
 
   if (isLoading) return <p>Loading...</p>;
   if (!form) return null;
@@ -24,7 +31,27 @@ const AboutEditor = () => {
   };
 
   return (
-    <section className="bg-card border rounded-2xl p-8 space-y-6 space-x-6">
+    <section className="bg-card border rounded-2xl p-8 space-y-6">
+      <h2 className="text-2xl font-bold">Hero Section</h2>
+
+      <input
+        className="input w-96"
+        value={form.tagline}
+        onChange={(e) =>
+          setForm({ ...form, tagline: e.target.value })
+        }
+        placeholder="Hero tagline"
+      />
+
+      <textarea
+        className="input w-full"
+        value={form.heroIntro}
+        onChange={(e) =>
+          setForm({ ...form, heroIntro: e.target.value })
+        }
+        rows={4}
+        placeholder="Hero intro text"
+      />
 
       <h2 className="text-2xl font-bold">About Section</h2>
 
@@ -39,7 +66,6 @@ const AboutEditor = () => {
           })
         }
         rows={10}
-        placeholder="Paragraphs (separate by blank line)"
       />
 
       <input
@@ -60,7 +86,6 @@ const AboutEditor = () => {
         placeholder="Birth Date"
       />
 
-
       <p>Languages (one per line)</p>
       <textarea
         className="input h-44"
@@ -71,8 +96,9 @@ const AboutEditor = () => {
             languages: e.target.value.split("\n"),
           })
         }
-        placeholder="Languages (one per line)"
       />
+
+       
 
       <button
         onClick={save}

@@ -6,7 +6,7 @@ import { useAbout } from "@/hooks/useAbout";
 const About = () => {
   const { education, loading: educationLoading } = useEducation();
   const { data: about, isLoading } = useAbout();
-  console.log(about);
+  // console.log(about);
 
   return (
     <section id="about" className="py-24 bg-background">
@@ -25,7 +25,7 @@ const About = () => {
             </div>
 
         
-            {about?.paragraphs?.map((p : string, i :number) => (
+            {about?.paragraphs && about.paragraphs.map((p : string, i :number) => (
               <p key={i} className="text-lg text-muted-foreground leading-relaxed">
                 {p}
               </p>

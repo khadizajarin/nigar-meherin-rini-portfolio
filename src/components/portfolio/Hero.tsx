@@ -1,7 +1,14 @@
 import { Mail, Phone, Linkedin, Facebook } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo-2.jpeg";
+import { useAbout } from "@/hooks/useAbout";
+
 
 const Hero = () => {
+  const { data: about, isLoading: loading } = useAbout();
+  if ( loading  || !about) return <p>Loading...</p>;
+  // console.log(about)
+
+
   return (
     <section className="min-h-screen bg-gradient-hero relative overflow-hidden">
       {/* Decorative elements */}
@@ -15,8 +22,8 @@ const Hero = () => {
           {/* Text Content */}
           <div className="text-primary-foreground space-y-8 animate-slide-up order-2 lg:order-1">
             <div className="space-y-4">
-              <p className="text-white font-body text-lg tracking-widest uppercase">
-                Journalist, Researcher, Media Consultant
+              <p className="text-white font-body text-lg  tracking-widest uppercase">
+              {about.tagline}
               </p>
               <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 Nigar Meherin
@@ -25,7 +32,7 @@ const Hero = () => {
             </div>
 
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-lg font-body leading-relaxed">
-              A communication practitioner with a foundation in journalism, dedicated to ethical storytelling and socially responsible communication. My work focuses on highlighting diverse perspectives, fostering informed dialogue, and using media as a tool for accountability and positive social impact.
+            {about.heroIntro}
             </p>
 
             {/* Contact Info */}

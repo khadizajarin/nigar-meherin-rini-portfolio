@@ -16,12 +16,13 @@ import TeachingEditor from "./TeachingEditor";
 import StoriesEditor from "./StoriesEditor";
 import PhotoGalleryEditor from "./PhotoGalleryEditor";
 import AboutEditor from "./AboutEditor";
+import ContactEditor from "./ContactEditor";
 
-type Tab = "about" | "education" | "experience" | "workshops" | "projects" | "research" | "teaching" | "stories" | "photo-gallery";
+type Tab = "about" | "education" | "experience" | "workshops" | "projects" | "research" | "teaching" | "stories" | "photo-gallery" | "contact";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState<Tab>("education");
+  const [activeTab, setActiveTab] = useState<Tab>("about");
 
   const handleLogout = async () => {
     try {
@@ -149,6 +150,17 @@ const Dashboard = () => {
             Photo Gallery
           </button>
 
+          <button
+            onClick={() => setActiveTab("contact")}
+            className={`text-left px-4 py-2 rounded-lg transition ${
+              activeTab === "contact"
+                ? "bg-primary text-primary-foreground"
+                : "hover:bg-primary/10"
+            }`}
+          >
+            Contact
+          </button>
+
           
         </nav>
       </aside>
@@ -163,7 +175,7 @@ const Dashboard = () => {
         {activeTab === "research" && <ResearchEditor/>}
         {activeTab === "teaching" && <TeachingEditor/>}
         {activeTab === "stories" && <StoriesEditor/>}
-        {activeTab === "photo-gallery" && <PhotoGalleryEditor/>}
+        {activeTab === "contact" && <ContactEditor/>}
       </main>
     </div>
   );
