@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { X, ZoomIn, ChevronDown, ChevronUp } from "lucide-react";
 import { getGallery, GalleryItem } from "@/services/gallery.firestore";
 
-const INITIAL_VISIBLE = 6;
+const INITIAL_VISIBLE = 8;
 
 const PhotoGallery = () => {
   const [items, setItems] = useState<GalleryItem[]>([]);

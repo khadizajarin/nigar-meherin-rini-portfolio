@@ -120,10 +120,19 @@ export default Contact;
 // import { useContact } from "@/hooks/useContact";
 
 // const Contact = () => {
-//   const { data: contact } = useContact();
-//   console.log("Contact Data:", contact); // Debugging log 
+//   const { data: contact, isLoading, error } = useContact();
 
-//   if (!contact) return null;
+//   if (isLoading) {
+//     return <div className="text-center py-20">Loading contact...</div>;
+//   }
+
+//   if (error) {
+//     return <div className="text-center py-20">Failed to load contact.</div>;
+//   }
+
+//   if (!contact) {
+//     return <div className="text-center py-20">No contact data found.</div>;
+//   }
 
 //   return (
 //     <section id="contact" className="py-24 bg-gradient-hero text-primary-foreground">
@@ -141,7 +150,6 @@ export default Contact;
 
 //         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
 
-//           {/* Email */}
 //           <a
 //             href={`mailto:${contact.email}`}
 //             className="flex items-center gap-4 p-6 bg-primary-foreground/10 rounded-2xl"
@@ -153,7 +161,6 @@ export default Contact;
 //             </div>
 //           </a>
 
-//           {/* Phone */}
 //           <a
 //             href={`tel:${contact.phone}`}
 //             className="flex items-center gap-4 p-6 bg-primary-foreground/10 rounded-2xl"
@@ -165,7 +172,6 @@ export default Contact;
 //             </div>
 //           </a>
 
-//           {/* Location */}
 //           <div className="flex items-center gap-4 p-6 bg-primary-foreground/10 rounded-2xl">
 //             <MapPin />
 //             <div>
@@ -174,14 +180,13 @@ export default Contact;
 //             </div>
 //           </div>
 
-//           {/* Socials */}
 //           <div className="flex gap-4 p-6 bg-primary-foreground/10 rounded-2xl">
 
-//             <a href={contact.linkedin} target="_blank">
+//             <a href={contact.linkedin} target="_blank" rel="noopener noreferrer">
 //               <Linkedin />
 //             </a>
 
-//             <a href={contact.facebook} target="_blank">
+//             <a href={contact.facebook} target="_blank" rel="noopener noreferrer">
 //               <Facebook />
 //             </a>
 
@@ -190,21 +195,20 @@ export default Contact;
 //             </a>
 
 //           </div>
+
 //         </div>
 
-//         {/* Quote */}
 //         <div className="mt-12 text-center">
 //           <p className="text-gold-light text-lg">
 //             "{contact.quote}"
 //           </p>
 //         </div>
 
-//         {/* Footer */}
-//          <div className="mt-20 pt-8 border-t border-primary-foreground/20 text-center">
-//            <p className="text-primary-foreground/60 font-body">
-//              © 2025 Nigar Meherin Rini. All rights reserved.
-//            </p>
-//          </div>
+//         <div className="mt-20 pt-8 border-t border-primary-foreground/20 text-center">
+//           <p className="text-primary-foreground/60">
+//             © 2025 Nigar Meherin Rini. All rights reserved.
+//           </p>
+//         </div>
 
 //       </div>
 //     </section>
